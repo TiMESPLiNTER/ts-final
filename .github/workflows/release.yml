@@ -47,13 +47,9 @@ jobs:
 
       - name: Publish final-decorator to npm
         run: npm publish --workspace final-decorator --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish eslint-plugin-final to npm
         run: npm publish --workspace eslint-plugin-final --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
