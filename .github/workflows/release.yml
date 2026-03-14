@@ -1,0 +1,61 @@
+name: Release Package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build --if-present
+
+      - name: Verify tag matches package versions
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          DECORATOR_VERSION="$(node -p \"require('./packages/final-decorator/package.json').version\")"
+          PLUGIN_VERSION="$(node -p \"require('./packages/eslint-plugin-final/package.json').version\")"
+
+          if [ "$TAG_VERSION" != "$DECORATOR_VERSION" ]; then
+            echo "Tag version $TAG_VERSION does not match final-decorator version $DECORATOR_VERSION"
+            exit 1
+          fi
+
+          if [ "$TAG_VERSION" != "$PLUGIN_VERSION" ]; then
+            echo "Tag version $TAG_VERSION does not match eslint-plugin-final version $PLUGIN_VERSION"
+            exit 1
+          fi
+
+      - name: Publish final-decorator to npm
+        run: npm publish --workspace final-decorator --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish eslint-plugin-final to npm
+        run: npm publish --workspace eslint-plugin-final --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true

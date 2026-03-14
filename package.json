@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run -ws build",
     "test": "npm run -ws test",
-    "pack:plugin": "npm pack --workspace eslint-plugin-final",
-    "pack:decorator": "npm pack --workspace final-decorator"
+    "pack:plugin": "npm pack --workspace eslint-plugin-final --pack-destination=\"./dist\"",
+    "pack:decorator": "npm pack --workspace final-decorator --pack-destination=\"./dist\""
   }
 }
