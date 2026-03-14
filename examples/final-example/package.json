@@ -1,0 +1,19 @@
+{
+  "name": "final-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo \"No build step\"",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix"
+  },
+  "dependencies": {
+    "final-decorator": "file:../../packages/final-decorator"
+  },
+  "devDependencies": {
+    "eslint": "^9.22.0",
+    "@typescript-eslint/parser": "^8.26.0",
+    "typescript": "^5.0.0",
+    "eslint-plugin-final": "file:../../packages/eslint-plugin-final"
+  }
+}

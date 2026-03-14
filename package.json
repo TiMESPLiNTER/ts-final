@@ -1,0 +1,13 @@
+{
+  "name": "eslint-plugin-final-repo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run -ws build",
+    "test": "npm run -ws test",
+    "pack:plugin": "npm pack --workspace eslint-plugin-final",
+    "pack:decorator": "npm pack --workspace final-decorator"
+  }
+}

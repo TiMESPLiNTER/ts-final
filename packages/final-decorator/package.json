@@ -1,0 +1,42 @@
+{
+  "name": "final-decorator",
+  "version": "0.1.0",
+  "description": "Runtime TypeScript decorator to mark classes and methods as final.",
+  "author": {
+    "name": "timesplinter",
+    "email": "github@timesplinter.ch"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timesplinter/eslint-plugin-final.git",
+    "directory": "packages/final-decorator"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [
+    "typescript",
+    "decorator",
+    "final",
+    "sealed"
+  ],
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
