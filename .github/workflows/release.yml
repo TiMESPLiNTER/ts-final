@@ -32,8 +32,8 @@ jobs:
       - name: Verify tag matches package versions
         run: |
           TAG_VERSION="${GITHUB_REF_NAME#v}"
-          DECORATOR_VERSION="$(node -p \"require('./packages/final-decorator/package.json').version\")"
-          PLUGIN_VERSION="$(node -p \"require('./packages/eslint-plugin-final/package.json').version\")"
+          DECORATOR_VERSION="$(node -p "require('./packages/final-decorator/package.json').version")"
+          PLUGIN_VERSION="$(node -p "require('./packages/eslint-plugin-final/package.json').version")"
 
           if [ "$TAG_VERSION" != "$DECORATOR_VERSION" ]; then
             echo "Tag version $TAG_VERSION does not match final-decorator version $DECORATOR_VERSION"
