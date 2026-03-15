@@ -39,7 +39,7 @@ export function Final(
   ctor.__finalMethods?.add(propertyKey);
 
   if (descriptor !== undefined) {
-    // Optional runtime hardening for decorated methods.
+    // Runtime hardening for decorated methods
     descriptor.writable = false;
   }
 }

@@ -1,6 +1,6 @@
 {
     "name": "eslint-plugin-final",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "ESLint plugin for marking classes and methods as final.",
     "author": {
         "name": "timesplinter",
@@ -9,13 +9,13 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/timesplinter/eslint-plugin-final.git",
+        "url": "git+https://github.com/timesplinter/ts-final.git",
         "directory": "packages/eslint-plugin-final"
     },
     "bugs": {
-        "url": "https://github.com/timesplinter/eslint-plugin-final/issues"
+        "url": "https://github.com/timesplinter/ts-final/issues"
     },
-    "homepage": "https://github.com/timesplinter/eslint-plugin-final#readme",
+    "homepage": "https://github.com/timesplinter/ts-final#readme",
     "main": "./dist/cjs/index.js",
     "module": "./dist/esm/index.js",
     "types": "./dist/types/index.d.ts",
