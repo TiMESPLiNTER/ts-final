@@ -1,49 +1,49 @@
 {
-  "name": "final-decorator",
-  "version": "0.1.2",
-  "description": "Runtime TypeScript decorator to mark classes and methods as final.",
-  "author": {
-    "name": "timesplinter",
-    "email": "dev@timesplinter.ch"
-  },
-  "license": "MIT",
-  "repository": {
-      "type": "git",
-      "url": "git+https://github.com/timesplinter/ts-final.git",
-      "directory": "packages/final-decorator"
-  },
-  "bugs": {
-      "url": "https://github.com/timesplinter/ts-final/issues"
-  },
-  "homepage": "https://github.com/timesplinter/ts-final#readme",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js",
-      "default": "./dist/esm/index.js"
+    "name": "final-decorator",
+    "version": "0.1.2",
+    "description": "Runtime TypeScript decorator to mark classes and methods as final.",
+    "author": {
+        "name": "timesplinter",
+        "email": "dev@timesplinter.ch"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/timesplinter/ts-final.git",
+        "directory": "packages/final-decorator"
+    },
+    "bugs": {
+        "url": "https://github.com/timesplinter/ts-final/issues"
+    },
+    "homepage": "https://github.com/timesplinter/ts-final#readme",
+    "main": "./dist/cjs/index.js",
+    "module": "./dist/esm/index.js",
+    "types": "./dist/types/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/types/index.d.ts",
+            "import": "./dist/esm/index.js",
+            "require": "./dist/cjs/index.js",
+            "default": "./dist/esm/index.js"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "rm -rf dist && tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json",
+        "prepack": "npm run build",
+        "test": "echo \"No tests configured\""
+    },
+    "keywords": [
+        "typescript",
+        "decorator",
+        "final",
+        "sealed"
+    ],
+    "devDependencies": {
+        "typescript": "^5.0.0"
     }
-  },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
-  "scripts": {
-    "build": "rm -rf dist && tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json",
-    "prepack": "npm run build",
-    "test": "echo \"No tests configured\""
-  },
-  "keywords": [
-    "typescript",
-    "decorator",
-    "final",
-    "sealed"
-  ],
-  "devDependencies": {
-    "typescript": "^5.0.0"
-  }
 }
