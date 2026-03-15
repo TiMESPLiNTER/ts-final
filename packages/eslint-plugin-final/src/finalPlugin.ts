@@ -4,7 +4,7 @@ import {
     getOwnMethodNames,
     hasParserServices,
     isFinalDecoratedClass,
-} from './noOverrideFinalRuleUtils.js';
+} from './finalPluginUtils.js';
 
 const isFinalDecoratorExpression = (expression: any): boolean => {
     if (expression?.type === 'Identifier') {

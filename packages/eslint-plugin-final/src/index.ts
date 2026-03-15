@@ -1,4 +1,4 @@
-import finalPlugin from './noOverrideFinalRule.js';
+import finalPlugin from './finalPlugin.js';
 
 export { finalPlugin };
 export default finalPlugin;

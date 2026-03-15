@@ -12,7 +12,9 @@ npm install final-decorator
 npm install --save-dev eslint-plugin-final
 ```
 
-## Usage (flat config)
+## Usage
+
+### Setting up ESLint
 
 ```js
 import finalPlugin from 'eslint-plugin-final';
@@ -29,6 +31,8 @@ export default [
   },
 ];
 ```
+
+### Marking classes and methods final
 
 ```ts
 import { Final } from 'final-decorator';
