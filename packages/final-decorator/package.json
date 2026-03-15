@@ -3,19 +3,19 @@
     "version": "0.1.2",
     "description": "Runtime TypeScript decorator to mark classes and methods as final.",
     "author": {
-        "name": "timesplinter",
+        "name": "TiMESPLiNTER",
         "email": "dev@timesplinter.ch"
     },
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/timesplinter/ts-final.git",
+        "url": "git+https://github.com/TiMESPLiNTER/ts-final.git",
         "directory": "packages/final-decorator"
     },
     "bugs": {
-        "url": "https://github.com/timesplinter/ts-final/issues"
+        "url": "https://github.com/TiMESPLiNTER/ts-final/issues"
     },
-    "homepage": "https://github.com/timesplinter/ts-final#readme",
+    "homepage": "https://github.com/TiMESPLiNTER/ts-final#readme",
     "main": "./dist/cjs/index.js",
     "module": "./dist/esm/index.js",
     "types": "./dist/types/index.d.ts",
